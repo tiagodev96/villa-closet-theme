@@ -1,0 +1,139 @@
+.header {
+  align-items: center;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px, auto);
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 0px 20px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.header a {
+  justify-self: center;
+}
+
+.logo {
+  width: 125px;
+}
+
+.busca form {
+  display: grid;
+}
+
+.busca #s {
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  grid-area: 1/1;
+  padding: 12px 40px 12px 20px;
+}
+
+.busca #searchbutton {
+  background: transparent url('../img/icons/search-icon.svg') no-repeat center center;
+  border: none;
+  cursor: pointer;
+  grid-area: 1/1;
+  justify-self: end;
+  text-indent: -100px;
+  width: 50px;
+}
+
+.conta {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-self: center;
+}
+
+@media (max-width: 1000px) {
+  .conta {
+    grid-gap: 40px;
+    justify-content: start;
+  }
+}
+
+.conta .minha-conta,
+.conta .carrinho,
+.conta .menu-loja {
+  padding: 5px 0px 5px 34px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.conta .minha-conta {
+  background-image: url('../img/icons/user-icon.svg');
+}
+
+.conta .carrinho {
+  background-image: url('../img/icons/cart-icon.svg');
+  position: relative;
+}
+
+.conta .menu-loja {
+  color: var(--main-bg-color);
+  border-radius: 10px;
+  background: var(--secondary-color);
+  padding: 10px 25px;
+}
+
+.carrinho-count {
+  align-items: center;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: .7rem;
+  font-weight: bold;
+  height: 16px;
+  justify-content: center;
+  left: 9px;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.menu-categorias {
+  background-color: var(--primary-color);
+  padding: 5px;
+}
+
+.menu-categorias ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-categorias ul li {
+  margin: 15px 10px;
+}
+
+.menu-categorias a {
+  color: var(--main-bg-color);
+  font-size: 1.325rem;
+  padding: 10px 15px;
+}
+
+.menu-categorias a:hover,
+.menu-categorias .current-menu-item a {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 800px) {
+  .menu-categorias {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .menu-categorias ul {
+    justify-content: initial;
+  }
+}
